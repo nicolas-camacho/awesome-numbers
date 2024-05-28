@@ -3,7 +3,7 @@ const awesomeNumbers = (function (){
    * @param {number} num 
    * @returns boolean
    */
-  const isEven = (num) => !(num % 2);
+  const isEven = (num) => !(num & 1);
 
   /** 
    * @param {number} num
@@ -36,6 +36,7 @@ const awesomeNumbers = (function (){
 
   /** 
    * @param {number} num
+   * @param {number} multiple
    * @returns boolean
   */
   const isMultipleOf = (num, multiple) => num % multiple === 0;
