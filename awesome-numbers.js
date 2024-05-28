@@ -1,49 +1,40 @@
-
-/**
- * @param {number} num 
- * @returns boolean
- */
-const isEven = (num) => !(num % 2);
-
-/** 
- * @param {number} num
- * @returns boolean
-*/
-const isOdd = (num) => !isEven(num);
-
-/**
- * @param {number} num
- * @returns number
- */
-const fibonacci = (num) => {
-  if (num <= 1) return num;
-  return fibonacci(num - 1) + fibonacci(num - 2);
+function Constructor(value) {
+  this.value = value;
 }
 
-/**
- * @param {number} num
+/** 
  * @returns boolean
  */
-const isPrime = (num) => {
-    if (num <= 1) return false;
-    if (num <= 3) return true;
-    if (isEven(num)) return false;
-    for (let i = 3; i <= Math.sqrt(num); i += 2) {
-        if (num % i === 0) return false;
+Constructor.prototype.isEven = function() {
+  return !(this.value & 1)
+};
+
+/** 
+ * @returns boolean
+*/
+Constructor.prototype.isOdd = function() {
+  return !this.isEven();
+} 
+
+/**
+ * @returns boolean
+ */
+Constructor.prototype.isPrime = function() {
+    if (this.value <= 1) return false;
+    if (this.value <= 3) return true;
+    if (this.isEven()) return false;
+    for (let i = 3; i <= Math.sqrt(this.value); i += 2) {
+        if (this.value % i === 0) return false;
     }
     return true;
 }
 
 /** 
- * @param {number} num
+ * @param {number} multiple
  * @returns boolean
 */
-const isMultipleOf = (num, multiple) => num % multiple === 0;
+Constructor.prototype.isMultipleOf = function(multiple) {
+  return this.value % multiple === 0;
+} 
 
-export {
-  isEven,
-  isOdd,
-  fibonacci,
-  isPrime,
-  isMultipleOf
-};
+export default Constructor;
