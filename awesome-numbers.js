@@ -3,7 +3,7 @@ class AwesomeNumber extends Number{
    * @returns boolean
    */
   isEven() {
-    return !(this.value & 1);
+    return !(this & 1);
   }
 
   /**
@@ -17,11 +17,11 @@ class AwesomeNumber extends Number{
    * @returns boolean
    */
   isPrime() {
-    if (this.value <= 1) return false;
-    if (this.value <= 3) return true;
+    if (this <= 1) return false;
+    if (this <= 3) return true;
     if (this.isEven()) return false;
-    for (let i = 3; i <= Math.sqrt(this.value); i += 2) {
-      if (this.value % i === 0) return false;
+    for (let i = 3; i <= Math.sqrt(this); i += 2) {
+      if (this % i === 0) return false;
     }
     return true;
   }
@@ -31,7 +31,7 @@ class AwesomeNumber extends Number{
    * @returns boolean
   */
   isMultipleOf(multiple) {
-    return this.value % multiple === 0;
+    return this % multiple === 0;
   }
 }
 
