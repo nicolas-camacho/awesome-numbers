@@ -1,7 +1,4 @@
-class AwesomeNumber {
-  constructor(value) {
-    this.value = value;
-  }
+class AwesomeNumber extends Number{
   /** 
    * @returns boolean
    */
