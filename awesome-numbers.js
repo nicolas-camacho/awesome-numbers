@@ -12,15 +12,6 @@ const isOdd = (num) => !isEven(num);
 
 /**
  * @param {number} num
- * @returns number
- */
-const fibonacci = (num) => {
-  if (num <= 1) return num;
-  return fibonacci(num - 1) + fibonacci(num - 2);
-}
-
-/**
- * @param {number} num
  * @returns boolean
  */
 const isPrime = (num) => {
