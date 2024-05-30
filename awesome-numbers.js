@@ -35,7 +35,6 @@ const isMultipleOf = (num, multiple) => num % multiple === 0;
 export {
   isEven,
   isOdd,
-  fibonacci,
   isPrime,
   isMultipleOf
 };
