@@ -38,7 +38,7 @@
       "publish": true
     },
     "git": {
-      "requireBranch": "main",
+      "requireBranch": "release",
       "commitMessage": "chore(release): ${version}"
     },
     "hooks": {

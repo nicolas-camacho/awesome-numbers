@@ -25,6 +25,17 @@ jobs:
       - run:
           name: Build
           command: npm run build
+  
+  release:
+    executor: node/default
+    steps:
+      - checkout
+      - run:
+          name: Authenticate with registry
+          command: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+      - run:
+          name: Release
+          command: npm run release
 
 workflows:
   test_library:
@@ -37,3 +48,17 @@ workflows:
       - build:
           requires:
             - test
+  
+  release_library:
+    jobs:
+      - test
+      - build:
+          requires:
+            - test
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - release
