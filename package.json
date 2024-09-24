@@ -1,6 +1,6 @@
 {
   "name": "@way4one/awesome-numbers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Library for awesome numbers operations",
   "main": "dist/awesome-numbers.cjs.js",
   "module": "dist/awesome-numbers.es.js",
@@ -32,7 +32,8 @@
   "release-it": {
     "$schema": "https://unpkg.com/release-it/schema/release-it.json",
     "github": {
-      "release": true
+      "release": true,
+      "assets": ["dist/*.js"]
     },
     "npm": {
       "publish": true
