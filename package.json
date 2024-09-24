@@ -33,14 +33,15 @@
     "$schema": "https://unpkg.com/release-it/schema/release-it.json",
     "github": {
       "release": true,
-      "assets": ["dist/*.js"]
+      "assets": ["dist/@way4one/*.js"]
     },
     "npm": {
       "publish": true
     },
     "git": {
       "requireBranch": "release",
-      "commitMessage": "chore(release): ${version}"
+      "commitMessage": "chore(release): ${version}",
+      "requireCleanWorkingDir": false
     },
     "hooks": {
       "before:init": [
