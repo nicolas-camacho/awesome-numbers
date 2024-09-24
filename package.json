@@ -10,7 +10,10 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./",
     "release": "release-it"
   },
-  "repository": "https://github.com/nicolas-camacho/awesome-numbers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolas-camacho/awesome-numbers.git"
+  },
   "keywords": [
     "awesome",
     "numbers",
