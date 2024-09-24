@@ -1,6 +1,6 @@
 {
   "name": "@way4one/awesome-numbers",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Library for awesome numbers operations",
   "main": "dist/awesome-numbers.cjs.js",
   "module": "dist/awesome-numbers.es.js",
