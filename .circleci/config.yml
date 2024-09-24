@@ -76,3 +76,4 @@ workflows:
             branches:
               only:
                 - release
+              ignore: /.*\/PR[-_].*/
