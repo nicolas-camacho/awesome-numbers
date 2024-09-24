@@ -31,6 +31,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Setup git
+          command: git branch --set-upstream-to=origin/release release
+      - run:
           name: Authenticate with registry
           command: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
       - run:
