@@ -34,6 +34,12 @@ jobs:
           name: Authenticate with registry
           command: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
       - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Build Library
+          command: npm run build
+      - run:
           name: Release
           command: npm run release
 
