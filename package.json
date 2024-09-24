@@ -1,15 +1,24 @@
 {
-  "name": "awesome-numbers",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@way4one/awesome-numbers",
+  "version": "0.0.1",
+  "description": "Library for awesome numbers operations",
+  "main": "dist/awesome-numbers.cjs.js",
+  "module": "dist/awesome-numbers.es.js",
   "type": "module",
   "scripts": {
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./"
   },
-  "keywords": [],
-  "author": "",
+  "repository": "https://github.com/nicolas-camacho/awesome-numbers",
+  "keywords": [
+    "awesome",
+    "numbers",
+    "test"
+  ],
+  "author": "nicolas-camacho",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.7.0",
     "rollup": "^4.18.0"
   }
 }
