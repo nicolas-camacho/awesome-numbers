@@ -27,4 +27,9 @@ describe("AwesomeNumber", () => {
         let newNumber = myAwesomeNumber + 2;
         expect(newNumber).toBe(6);
     });
+
+    it("sum with AwesomeNumber", () => {
+        let newNumber = myAwesomeNumber + new AwesomeNumber(2);
+        expect(newNumber).toBe(6);
+    });
 });
