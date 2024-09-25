@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup --config",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./",
-    "release": "release-it"
+    "release": "release-it --ci"
   },
   "repository": {
     "type": "git",
