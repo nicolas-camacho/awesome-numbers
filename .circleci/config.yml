@@ -76,5 +76,5 @@ workflows:
             branches:
               only:
                 - release
-            commit:
+            tags:
               only: /^release:/
