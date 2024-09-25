@@ -41,7 +41,7 @@
       "publish": true
     },
     "git": {
-      "requireBranch": "release",
+      "requireBranch": "main",
       "commitMessage": "chore(release): ${version}",
       "requireCleanWorkingDir": false
     },
