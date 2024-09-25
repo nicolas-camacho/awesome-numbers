@@ -66,15 +66,9 @@ workflows:
   release_library:
     jobs:
       - test
-      - build:
-          requires:
-            - test
       - release:
           requires:
-            - build
+            - test
           filters:
-            branches:
-              only:
-                - release
             tags:
               only: /^release:/
