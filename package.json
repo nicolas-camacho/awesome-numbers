@@ -1,6 +1,6 @@
 {
   "name": "@way4one/awesome-numbers",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Library for awesome numbers operations",
   "main": "dist/awesome-numbers.cjs.js",
   "module": "dist/awesome-numbers.es.js",
@@ -41,7 +41,7 @@
       "publish": true
     },
     "git": {
-      "requireBranch": "release",
+      "requireBranch": "main",
       "commitMessage": "chore(release): ${version}",
       "requireCleanWorkingDir": false
     },

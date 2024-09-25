@@ -37,7 +37,7 @@ jobs:
             git config --global user.name "Nicolas Camacho"
       - run:
           name: Setup git
-          command: git branch --set-upstream-to=origin/release release
+          command: git branch --set-upstream-to=origin/main main
       - run:
           name: Authenticate with registry
           command: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
@@ -64,17 +64,17 @@ workflows:
             - test
   
   release_library:
+    when:
+      condition:
+        not:
+          equal: [ "<< pipeline.git.base_revision >>", null ]
     jobs:
       - test
-      - build:
-          requires:
-            - test
       - release:
           requires:
-            - build
+            - test
           filters:
             branches:
-              only:
-                - release
+              only: main
             tags:
               only: /^release:/
