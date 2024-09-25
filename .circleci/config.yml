@@ -64,10 +64,6 @@ workflows:
             - test
   
   release_library:
-    when:
-      condition:
-        not:
-          equal: [ "<< pipeline.git.base_revision >>", null ]
     jobs:
       - test
       - release:
@@ -76,5 +72,3 @@ workflows:
           filters:
             branches:
               only: main
-            tags:
-              only: /^release:/
