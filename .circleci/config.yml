@@ -76,4 +76,5 @@ workflows:
             branches:
               only:
                 - release
-              ignore: /.*\/PR[-_].*/
+            commit:
+              only: /^release:/
