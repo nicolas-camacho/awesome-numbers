@@ -70,6 +70,8 @@ workflows:
           requires:
             - test
           filters:
+            branches:
+              only: main
             tags:
               only: /^release:/
           when:
