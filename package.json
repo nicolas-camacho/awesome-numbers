@@ -2,8 +2,8 @@
   "name": "@way4one/awesome-numbers",
   "version": "0.0.17",
   "description": "Library for awesome numbers operations",
-  "main": "dist/awesome-numbers.cjs.js",
-  "module": "dist/awesome-numbers.es.js",
+  "main": "dist/@way4one/awesome-numbers.cjs.js",
+  "module": "dist/@way4one/awesome-numbers.es.js",
   "type": "module",
   "scripts": {
     "build": "rollup --config",

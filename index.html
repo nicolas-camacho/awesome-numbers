@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@way4one/awesome-numbers@0.0.17/dist/@way4one/awesome-numbers.iife.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js" type="module"></script>
+    <script>
+        const awesomeNumbers = new AwesomeNumbers(2);
+        console.log("even", awesomeNumbers.isEven());
+    </script>
 </body>
 </html>
